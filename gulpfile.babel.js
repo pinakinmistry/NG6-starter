@@ -13,6 +13,7 @@ import lodash   from 'lodash';
 
 let reload = () => serve.reload();
 let root = 'client';
+let output = root + '/dist';
 
 // helper method for resolving paths
 let resolveToApp = (glob) => {
@@ -34,7 +35,7 @@ let paths = {
     path.join(root, 'index.html')
   ],
   entry: path.join(root, 'app/app.js'),
-  output: root,
+  output: output,
   blankTemplates: path.join(__dirname, 'generator', 'component/**/*.**')
 };
 
