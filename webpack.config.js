@@ -1,6 +1,9 @@
+var path = require("path");
 module.exports = {
   devtool: 'sourcemap',
   output: {
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: 'dist/',
     filename: 'bundle.js'
   },
   module: {
